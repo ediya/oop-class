@@ -1,6 +1,3 @@
-import org.junit.Assert;
-import static org.hamcrest.CoreMatchers.*;
-
 /**
  * Created by ce416-081 on 2014. 10. 24..
  */
@@ -8,16 +5,12 @@ public class MyTest {
 
     public static void main(String[] args){
 
-        int result = new Calculator().getSum(1,2);
+        Calculator calc = new Calculator();
 
-        Assert.assertThat(1+2, is(3));
-    }
+        int sum = calc.getSum(1, 2);
+        System.out.println("1 + 2 = " + sum);
 
-}
-
-class Calculator {
-
-    public int getSum(int n1, int n2){
-        return n1 + n2;
+        int sum1to2 = calc.getSum1To10();
+        System.out.println("1 + 2 + ... + 10 = " + sum1to2);
     }
 }
